@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js-Calculator</title>
-</head>
-<body>
-    
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+      integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+      integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Js-Calculator</h1>
+      </header>
+
+      <div class="calculator-container">
+        <div class="calculator">
+          <div class="viewer">
+            <input type="text" id="result" class="display" readonly />
+          </div>
+          <div class="buttons">
+            <button onclick="clr()" data-num="C">C</button>
+            <button onclick="dis('1')" data-num="1">1</button>
+            <button onclick="dis('2')" data-num="2">2</button>
+            <button onclick="dis('3')" data-num="3">3</button>
+            <button onclick="dis('/')" data-ops="/">/</button>
+            <button onclick="dis('4')" data-num="4">4</button>
+            <button onclick="dis('5')" data-num="5">5</button>
+            <button onclick="dis('6')" data-num="6">6</button>
+            <button onclick="dis('*')" data-ops="*">*</button>
+            <button onclick="dis('7')" data-num="7">7</button>
+            <button onclick="dis('8')" data-num="8">8</button>
+            <button onclick="dis('9')" data-num="9">9</button>
+            <button onclick="dis('-')" data-ops="-">-</button>
+            <button onclick="dis('.')" data-num=".">.</button>
+            <button onclick="dis('0')" data-num="0">0</button>
+            <button onclick="solve()" class="equals" data-result="=">=</button>
+            <button onclick="dis('+')" data-ops="+">+</button>
+            <button onclick="deleteLastCharacter()" data-num="delete">DL</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
